@@ -16,7 +16,7 @@ class LoginsController < ApplicationController
     end
   end
 
-  def destroy
+  def logout
     session[:user_id] = nil
     redirect_to users_path
   end
