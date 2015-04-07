@@ -4676,3 +4676,318 @@ ORDER BY c.conname
   [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 3]]
   [1m[36mIngredient Load (0.6ms)[0m  [1mSELECT "ingredients".* FROM "ingredients" INNER JOIN "recipe_ingredients" ON "ingredients"."id" = "recipe_ingredients"."ingredient_id" WHERE "recipe_ingredients"."recipe_id" = $1[0m  [["recipe_id", 3]]
   [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "ingredients" INNER JOIN "recipe_ingredients" ON "ingredients"."id" = "recipe_ingredients"."ingredient_id" WHERE "recipe_ingredients"."recipe_id" = $1  [["recipe_id", 3]]
+DEPRECATION WARNING: Defining a route where `to` is a controller without an action is deprecated. Please change `to: :homes/index` to `controller: :homes/index`. (called from block in <top (required)> at /Users/apprentice/Desktop/ryan_i/recipes_on_rails/RecipeBook/config/routes.rb:3)
+
+
+Started GET "/" for ::1 at 2015-04-07 17:24:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomesController#index as HTML
+  Rendered homes/index.html.erb within layouts/application (5.8ms)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    2: 
+    3: <div id="home-recipe-list">
+    4:   <ul>
+    5:     <% @recipe.each do |recipe| %>
+    6:       <li><%= recipe.title%></li>
+    7:     <%end%>
+    8:   </ul>
+  app/views/homes/index.html.erb:5:in `_app_views_homes_index_html_erb___121120188397886042_70158299350980'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (28.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (64.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-07 17:25:06 -0400
+Processing by HomesController#index as HTML
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered homes/index.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 578ms (Views: 574.8ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/assets/homes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/homes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/scaffolds-39f16cc2ab0cd7e8aff9f0ef9241ef16.css?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/application-8900f3d9b82287fa7df267c95e02dfa2.css?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:06 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:07 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:07 -0400
+
+
+Started GET "/" for ::1 at 2015-04-07 17:25:39 -0400
+Processing by HomesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered homes/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 137ms (Views: 135.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/homes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/scaffolds-39f16cc2ab0cd7e8aff9f0ef9241ef16.css?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/application-8900f3d9b82287fa7df267c95e02dfa2.css?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/homes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-07 17:25:39 -0400
+
+
+Started GET "/" for ::1 at 2015-04-07 17:27:00 -0400
+Processing by HomesController#index as HTML
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered homes/index.html.erb within layouts/application (12.7ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined local variable or method `show_recipe_path' for #<#<Class:0x007f9dfcff11c0>:0x007f9e011e8d08>):
+    3: <div id="home-recipe-list">
+    4:   <ul>
+    5:     <% @recipes.each do |recipe| %>
+    6:       <li><%= link_to 'recipe.title', show_recipe_path %></li>
+    7:     <%end%>
+    8:   </ul>
+    9: </div>
+  app/views/homes/index.html.erb:6:in `block in _app_views_homes_index_html_erb___121120188397886042_70158300191020'
+  app/views/homes/index.html.erb:5:in `_app_views_homes_index_html_erb___121120188397886042_70158300191020'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (27.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (35.4ms)
+
+
+Started GET "/" for ::1 at 2015-04-07 17:27:19 -0400
+Processing by HomesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered homes/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"recipes"} missing required keys: [:id]):
+    3: <div id="home-recipe-list">
+    4:   <ul>
+    5:     <% @recipes.each do |recipe| %>
+    6:       <li><%= link_to 'recipe.title', recipe_path %></li>
+    7:     <%end%>
+    8:   </ul>
+    9: </div>
+  app/views/homes/index.html.erb:6:in `block in _app_views_homes_index_html_erb___121120188397886042_70158285495980'
+  app/views/homes/index.html.erb:5:in `_app_views_homes_index_html_erb___121120188397886042_70158285495980'
+
+
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/actionpack-4.2.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (31.3ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (19.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/apprentice/.rbenv/versions/2.0.0-p353/lib/ruby/gems/2.0.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (85.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-07 17:27:38 -0400
+Processing by HomesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered homes/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 129ms (Views: 127.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/homes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/scaffolds-39f16cc2ab0cd7e8aff9f0ef9241ef16.css?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/application-8900f3d9b82287fa7df267c95e02dfa2.css?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/homes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-07 17:27:38 -0400
+
+
+Started GET "/" for ::1 at 2015-04-07 17:27:52 -0400
+Processing by HomesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered homes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 173ms (Views: 171.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/homes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/scaffolds-39f16cc2ab0cd7e8aff9f0ef9241ef16.css?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/application-8900f3d9b82287fa7df267c95e02dfa2.css?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/homes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:52 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:53 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:53 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-07 17:27:53 -0400
+
+
+Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-07 17:27:53 -0400
+
+
+Started GET "/recipes/1" for ::1 at 2015-04-07 17:27:55 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 134ms (Views: 125.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for ::1 at 2015-04-07 17:27:57 -0400
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 159ms (Views: 158.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/recipes/3" for ::1 at 2015-04-07 17:27:59 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered recipes/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 124ms (Views: 122.3ms | ActiveRecord: 0.3ms)
