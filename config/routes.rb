@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
   resources :recipes
   resources :users
+  resources :ingredients
+
   resource :login do
-    get '/logout'
+    get '/logout' => 'user#logout'
   end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
