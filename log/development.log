@@ -6012,3 +6012,197 @@ Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 a
 
 
 Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-08 16:36:30 -0400
+
+
+Started GET "/login" for ::1 at 2015-04-08 16:37:37 -0400
+Processing by LoginsController#show as HTML
+  Rendered logins/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 193ms (Views: 127.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/login" for ::1 at 2015-04-08 16:37:37 -0400
+Processing by LoginsController#show as HTML
+  Rendered logins/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 163ms (Views: 162.6ms | ActiveRecord: 0.0ms)
+
+
+Started PUT "/login" for ::1 at 2015-04-08 16:37:41 -0400
+Processing by LoginsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iRasXbJOR2MSlUs8rNFQ6cvruclMHrEWIGA5x1GHrA7RSrYR4xkwaSyo2uxE+CqZqFxQ154qLzBnOtq1e7o7ng==", "name"=>"Ryan", "password"=>"[FILTERED]", "commit"=>"login"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."name" = $1 LIMIT 1  [["name", "Ryan"]]
+Redirected to http://localhost:3000/users
+Completed 302 Found in 80ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for ::1 at 2015-04-08 16:37:41 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 136ms (Views: 135.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/homes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/scaffolds-39f16cc2ab0cd7e8aff9f0ef9241ef16.css?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/application-8900f3d9b82287fa7df267c95e02dfa2.css?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/homes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-08 16:37:42 -0400
+
+
+Started GET "/" for ::1 at 2015-04-08 16:38:04 -0400
+Processing by HomesController#index as HTML
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"
+  Rendered homes/index.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 168ms (Views: 166.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/homes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/application-8900f3d9b82287fa7df267c95e02dfa2.css?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/scaffolds-39f16cc2ab0cd7e8aff9f0ef9241ef16.css?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/homes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-08 16:38:04 -0400
+
+
+Started GET "/" for ::1 at 2015-04-08 16:39:25 -0400
+Processing by HomesController#index as HTML
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered homes/index.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 170ms (Views: 167.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/homes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/recipes-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/scaffolds-39f16cc2ab0cd7e8aff9f0ef9241ef16.css?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/users-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/application-8900f3d9b82287fa7df267c95e02dfa2.css?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/ingredients-64e62ddc273c2f5847f30d698ca14b67.css?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/jquery-87424c3c19e96d4fb033c10ebe21ec40.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/jquery_ujs-e27bd20a10d28155845a22d71ef94f2f.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/turbolinks-f87b3583ca50adb0488b031297f5580d.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/homes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/ingredients-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/recipes-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/users-fcec5b5a277ac7c20cc9f45a209a3bcd.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/assets/application-f8c18e828380cb6b0ac0f8a67cdc29fb.js?body=1" for ::1 at 2015-04-08 16:39:25 -0400
+
+
+Started GET "/recipes/1" for ::1 at 2015-04-08 16:39:28 -0400
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes" WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  [1m[35mRecipeIngredient Load (0.2ms)[0m  SELECT "recipe_ingredients".* FROM "recipe_ingredients" WHERE "recipe_ingredients"."recipe_id" = $1  [["recipe_id", 1]]
+  Rendered recipes/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+Completed 200 OK in 166ms (Views: 162.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2015-04-08 16:39:29 -0400
+Processing by HomesController#index as HTML
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered homes/index.html.erb within layouts/application (2.5ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 198ms (Views: 196.1ms | ActiveRecord: 0.8ms)
