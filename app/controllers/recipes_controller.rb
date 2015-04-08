@@ -5,6 +5,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
+  def show
+    @cur_recipe = Recipe.find_by(id: params[:id])
+  end
+
   def new
     @recipe = Recipe.new
   end
