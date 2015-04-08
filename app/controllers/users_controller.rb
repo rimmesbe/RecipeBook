@@ -9,6 +9,11 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def show
+    @cur_user = User.find_by(id: params[:id])
+    @recipes = Recipe.where(user: @cur_user)
+  end
+
   def create
     @user = User.new(user_params)
 
