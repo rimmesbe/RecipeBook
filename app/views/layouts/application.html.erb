@@ -9,7 +9,7 @@
 <body>
   <header>
     <% if current_user %>
-      <p>User: <a href="#"><%=current_user.name%></a></p>
+      User:<%= link_to current_user.name, current_user%>
       <%= link_to 'Logout', logout_login_path, method: :get%>
     <%else%>
       <a href="/login">Login</a>
