@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :recipes
   resources :users
   resources :ingredients
+  resources :recipe_ingredients
 
   resource :login do
     get '/logout' => 'logins#logout'
