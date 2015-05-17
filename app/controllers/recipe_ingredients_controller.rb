@@ -9,7 +9,11 @@ class RecipeIngredientsController < ApplicationController
   end
 
   def create
-    @recipe_ingredient = Recipe_Ingredient.new(recipe_ingredient_params)
+    p "params"
+    p params
+    @recipe_ingredient = Recipe_Ingredient.new(quantity: params[:quantity],
+                                               recipe_id: params[:recipe_id],
+                                               ingredient_id: params[:ingredient].id)
 
     respond_to do |format|
       if @recipe_ingredient.save
@@ -29,6 +33,5 @@ class RecipeIngredientsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
 
 end
