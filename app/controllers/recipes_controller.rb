@@ -12,6 +12,9 @@ class RecipesController < ApplicationController
   def new
     if session[:user_id]
       @recipe = Recipe.new
+      10.times do
+        @recipe_ingredient = @recipe.recipe_ingredients.build
+      end
     else
       redirect_to login_path
     end
@@ -19,6 +22,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.user_id = session[:user_id]
 
     respond_to do |format|
       if @recipe.save
