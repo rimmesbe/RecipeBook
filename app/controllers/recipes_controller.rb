@@ -12,15 +12,15 @@ class RecipesController < ApplicationController
   def new
     if session[:user_id]
       @recipe = Recipe.new
-      10.times do
-        @recipe_ingredient = @recipe.recipe_ingredients.build
-      end
+      @recipe_ingredient = @recipe.recipe_ingredients.build
     else
       redirect_to login_path
     end
   end
 
   def create
+    p "params"
+    p params
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = session[:user_id]
 
@@ -38,6 +38,7 @@ class RecipesController < ApplicationController
   def update
     respond_to do |format|
       if @recipe.user_id == session[:user_id]
+        @recipe_ingredient = @recipe.recipe_ingredients
         if @recipe.update(recipe_params)
           format.html { redirect_to @recipe, notice: 'Recipe was successfully updated.' }
           format.json { render :show, status: :ok, location: @recipe }
@@ -73,6 +74,6 @@ class RecipesController < ApplicationController
     end
 
     def recipe_params
-      params.require(:recipe).permit(:title, :instruction)
+      params.require(:recipe).permit(:title, :instruction, recipe_ingredients_attributes: [:ingredient_id, :quantity, :_destroy])
     end
 end
