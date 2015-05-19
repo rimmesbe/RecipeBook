@@ -2,10 +2,11 @@ Rails.application.routes.draw do
 
   root to: 'homes#index'
 
-  resources :recipes
+  resources :recipes do
+    resources :recipe_ingredients
+  end
   resources :users
   resources :ingredients
-  resources :recipe_ingredients
 
   resource :login do
     get '/logout' => 'logins#logout'
