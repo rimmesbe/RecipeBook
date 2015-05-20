@@ -11,6 +11,7 @@ class RecipesController < ApplicationController
 
   def new
     if session[:user_id]
+      @ingredient = Ingredient.new
       @recipe = Recipe.new
       @recipe_ingredient = @recipe.recipe_ingredients.build
     else

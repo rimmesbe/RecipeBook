@@ -1,4 +1,4 @@
-<p id="add_ingredient">
+<p class="add_ingredient">
   <%= f.label :ingredient_id, "Ingredient" %><br>
   <%= f.collection_select :ingredient_id, Ingredient.order(:name), :id,:name, include_blank: true %>
   <%= f.text_field :quantity %><br>
