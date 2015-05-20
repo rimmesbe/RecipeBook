@@ -4,7 +4,7 @@
   <ul>
     <% @recipes.each do |recipe| %>
       <dt><li><%= link_to recipe.title, recipe_path(recipe) %></li>
-+        <dd>created by: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
+        <dd>author: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
     <%end%>
   </ul>
 </div>
