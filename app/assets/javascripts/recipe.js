@@ -13,4 +13,14 @@ $( document ).ready(function() {
     var content = $(this).data("content");
     add_fields(link, association, content);
   });
+
+  $('#genres_select').change(function() {
+    $.ajax({
+      url: "#{update_artists_path}",
+      data: {
+        genre_id : $('#genres_select').val()
+      },
+      dataType: "script"
+    });
+  });
 });
