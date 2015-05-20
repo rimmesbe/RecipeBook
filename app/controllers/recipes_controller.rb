@@ -10,6 +10,8 @@ class RecipesController < ApplicationController
   end
 
   def new
+    p "params"
+    p params
     if session[:user_id]
       @recipe = Recipe.new
       @recipe_ingredient = @recipe.recipe_ingredients.build

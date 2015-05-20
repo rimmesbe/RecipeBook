@@ -9,8 +9,6 @@ class RecipeIngredientsController < ApplicationController
   end
 
   def create
-    p "params"
-    p params
     @recipe_ingredient = Recipe_Ingredient.new(quantity: params[:quantity],
                                                recipe_id: params[:recipe_id],
                                                ingredient_id: params[:ingredient].id)
@@ -32,6 +30,15 @@ class RecipeIngredientsController < ApplicationController
       format.html { redirect_to recipes_url, notice: 'Recipe was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def update
+    p "params"
+    p params
+    @ingredients = Ingredient.find(params[:type])
+
+    @recipe_ingredients = ingredients.map{|a| [a.name, a.id]}.insert(0, "Select an Ingredient")
+
   end
 
 end

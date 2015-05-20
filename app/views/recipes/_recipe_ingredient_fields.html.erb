@@ -1,7 +1,23 @@
 <p id="add_ingredient">
   <%= f.label :ingredient_id, "Ingredient" %><br>
-  <%= f.collection_select :ingredient_id, Ingredient.order(:name), :id,:name, include_blank: true %>
+  <%= f.collection_select(nil, :ingredient_id, @ingredients, :id, :name, {:id => 'category_select'})%>
+  <span id="recipe-ingredient"><%= f.collection_select(:ingredient_id, @ingredients, :id, :name, {:prompt => "Select Ingredient"}, {:id => 'ingredient_select'})%></span>
+  <%= f.label :quantity, "Quantity" %>
   <%= f.text_field :quantity %><br>
   <%= f.check_box :_destroy %>
   <%= f.label :_destroy, "Remove" %><br>
 </p>
+
+<script>
+$(document).ready(function(){
+  $('#category_select').change(function() {
+    $.ajax({
+      url: "<%= update_recipe_ingredient_path %>",
+      data: {
+        ingredient_type : $('#category_select').val()
+      },
+      dataType: "script"
+    });
+  });
+});
+</script>
