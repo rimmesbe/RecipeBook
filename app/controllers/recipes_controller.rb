@@ -19,8 +19,6 @@ class RecipesController < ApplicationController
   end
 
   def create
-    p "params"
-    p params
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = session[:user_id]
 

@@ -3,7 +3,8 @@
 <div id="home-recipe-list">
   <ul>
     <% @recipes.each do |recipe| %>
-      <li><%= link_to recipe.title, recipe_path(recipe) %></li>
+      <dt><li><%= link_to recipe.title, recipe_path(recipe) %></li>
+        <dd>author: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
     <%end%>
   </ul>
 </div>
