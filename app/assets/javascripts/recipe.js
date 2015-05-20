@@ -6,6 +6,7 @@ function add_fields(link, association, content){
 
 
 $( document ).ready(function() {
+  // dynamically adds ingredient fields for new recipe
   $('#add_recipe').on("click", "a.link_to_add_fields", function(e){
     e.preventDefault();
     var link = $(this);
@@ -14,13 +15,11 @@ $( document ).ready(function() {
     add_fields(link, association, content);
   });
 
-  $('#genres_select').change(function() {
-    $.ajax({
-      url: "#{update_artists_path}",
-      data: {
-        genre_id : $('#genres_select').val()
-      },
-      dataType: "script"
-    });
+  // TODO: make collection_select only reload instead of entire page
+  $('form[data-remote=true]').on("ajax:success", function(e){
+    // var ingredients = $("#recipe_recipe_ingredients_attributes_0_ingredient_id").DataTable({ajax: "data.json"});
+    window.location.reload();
+    // $('.add_ingredient').reload();
+    // $('.add_ingredient').reload('/ingredients .add_ingredient', function() {});
   });
 });
