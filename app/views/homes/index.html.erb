@@ -1,20 +1,28 @@
-<h1>Hot Recipes</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Recipes</h1>
+      <div id="home-recipe-list">
+        <ul>
+          <% @recipes.each do |recipe| %>
+            <dt><li><%= link_to recipe.title, recipe_path(recipe) %></li>
+              <dd>author: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
+          <%end%>
+        </ul>
+      </div>
+      <%= link_to 'Create Recipe', new_recipe_path %>
+    </div>
 
-<div id="home-recipe-list">
-  <ul>
-    <% @recipes.each do |recipe| %>
-      <dt><li><%= link_to recipe.title, recipe_path(recipe) %></li>
-        <dd>author: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
-    <%end%>
-  </ul>
-</div>
-<%= link_to 'Create Recipe', new_recipe_path %>
+    <div class="col-md-6">
+      <h1>Chefs</h1>
+      <div id="home-users-list">
+        <ul>
+          <% @users.each do |user| %>
+            <li><%= link_to user.name, user_path(user) %></li>
+          <%end%>
+        </ul>
+      </div>
+    </div>
 
-<h1>Top Users</h1>
-<div id="home-users-list">
-  <ul>
-    <% @users.each do |user| %>
-      <li><%= link_to user.name, user_path(user) %></li>
-    <%end%>
-  </ul>
-</div>
+  </div> <!-- div row -->
+</div> <!-- div container -->
