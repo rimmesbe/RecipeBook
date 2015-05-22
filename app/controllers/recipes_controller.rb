@@ -3,10 +3,20 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.all
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @recipes }
+    end
   end
 
   def show
     @cur_recipe = Recipe.find_by(id: params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json { render json: @cur_recipe }
+    end
   end
 
   def new

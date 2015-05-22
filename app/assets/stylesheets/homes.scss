@@ -1,3 +1,94 @@
 // Place all the styles related to the homes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+dd {
+  font-size: 18px;
+  padding-left: 5%;
+}
+
+#create-recipe {
+  width: 50%;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.btn-default {
+  background-image: url("the-knife.jpg");
+  background-repeat: no-repeat;
+  border: none;
+  font-size: 40px;
+  font-weight: bold;
+  line-height: .6;
+  width: 93%;
+  height: 168px;
+}
+
+.btn-default:hover {
+  opacity: .5;
+}
+
+.user-nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+}
+
+#recipes {
+  background-image: url("rounded-recipe-book2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  min-height: 500px;
+}
+
+#chefs {
+  background-image: url("rounded-chef.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  min-height: 500px;
+}
+
+#body {
+  background-color: #D28218;
+}
+
+#navigation {
+  background-color: rgb(174, 115, 49);
+  border: 1px solid rgb(174, 115, 49);
+}
+
+.home-titles {
+  font-size: 56px;
+  padding-top: 10px;
+}
+
+.home-list {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  background: rgba(0,0,0,.1);
+  border: none;
+}
+
+.recipe-chef {
+  margin-left: 10%;
+}
+
+li .badge {
+  background-color: #D28218;
+  color: #177E2C;
+}
+
+.list-group-item {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  background: rgba(0,0,0,.1);
+  border: none;
+}
+
+.list-group-item:hover {
+  background: rgba(0,0,0,.1);
+}

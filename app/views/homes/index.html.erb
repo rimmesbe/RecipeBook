@@ -1,20 +1,42 @@
-<h1>Hot Recipes</h1>
+<div class="container" style="width: 90%;">
+  <div class="row">
 
-<div id="home-recipe-list">
-  <ul>
-    <% @recipes.each do |recipe| %>
-      <dt><li><%= link_to recipe.title, recipe_path(recipe) %></li>
-        <dd>author: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
-    <%end%>
-  </ul>
-</div>
-<%= link_to 'Create Recipe', new_recipe_path %>
+    <div class="col-md-6">
+      <div id="recipes">
+        <div class="recipe-chef">
+          <h1 class="home-titles">Recipes</h1>
+          <div class="list-group">
+            <% @recipes.each do |recipe| %>
+              <dt><%= link_to recipe.title,recipe_path(recipe), class: "list-group-item" %>
+                <dd>Chef: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
+            <%end%>
+          </div>
+        </div> <!-- recipe-chef -->
 
-<h1>Top Users</h1>
-<div id="home-users-list">
-  <ul>
-    <% @users.each do |user| %>
-      <li><%= link_to user.name, user_path(user) %></li>
-    <%end%>
-  </ul>
-</div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div id="chefs">
+        <div class="recipe-chef">
+          <h1 class="home-titles">Chefs</h1>
+          <div id="home-users-list">
+            <ul class="list-group">
+              <% @users.each do |user| %>
+                <li class="home-list"><%= link_to user.name, user_path(user) %><span class="badge glyphicon glyphicon-book"><span style="padding-left: 5px;"></span><%= user.recipes.count %></span></li>
+              <%end%>
+            </ul>
+          </div>
+        </div> <!-- recipe-chef -->
+      </div>
+    </div>
+
+  </div> <!-- div row -->
+  <div class="row">
+    <div class="col-md-12">
+      <div id="create-recipe">
+        <%= link_to 'Create Recipe', new_recipe_path, id: "create-btn", class: "btn btn-default" %>
+      </div>
+    </div>
+  </div>
+</div> <!-- div container -->
