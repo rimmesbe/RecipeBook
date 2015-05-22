@@ -5,13 +5,11 @@
       <div id="recipes">
         <div class="recipe-chef">
           <h1 class="home-titles">Recipes</h1>
-          <div id="home-recipe-list">
-            <ul class="list-group">
-              <% @recipes.each do |recipe| %>
-                <dt><li class="home-list list-group-item"><%= link_to recipe.title, recipe_path(recipe) %></li>
-                  <dd style="padding-left: 5%;">Chef: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
-              <%end%>
-            </ul>
+          <div class="list-group">
+            <% @recipes.each do |recipe| %>
+              <dt><%= link_to recipe.title,recipe_path(recipe), class: "list-group-item" %>
+                <dd>Chef: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
+            <%end%>
           </div>
         </div> <!-- recipe-chef -->
 
@@ -37,7 +35,7 @@
   <div class="row">
     <div class="col-md-12">
       <div id="create-recipe">
-        <h1 id="create-recipe-h1"><%= link_to 'Create Recipe', new_recipe_path %><h1>
+        <%= link_to 'Create Recipe', new_recipe_path, id: "create-btn", class: "btn btn-default" %>
       </div>
     </div>
   </div>
