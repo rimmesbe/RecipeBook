@@ -15,11 +15,16 @@ $( document ).ready(function() {
     add_fields(link, association, content);
   });
 
-  // TODO: make collection_select only reload instead of entire page
-  $('form[data-remote=true]').on("ajax:success", function(e){
-    // var ingredients = $("#recipe_recipe_ingredients_attributes_0_ingredient_id").DataTable({ajax: "data.json"});
-    window.location.reload();
-    // $('.add_ingredient').reload();
-    // $('.add_ingredient').reload('/ingredients .add_ingredient', function() {});
+  $('form#new_ingredient').on("submit", function(e){
+    e.preventDefault();
+    var $target = $(e.target);
+    $.ajax({
+      type: $target.attr("method"),
+      url: $target.attr("action"),
+      data: $target.serialize()
+    }).done(function(response){
+      $('.select-ingredient').append(response);
+      $target[0].reset();
+    });
   });
 });
