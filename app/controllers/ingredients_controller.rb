@@ -11,7 +11,7 @@ class IngredientsController < ApplicationController
     @ingredient = Ingredient.new(ingredient_params)
 
     if @ingredient.save
-      redirect_to ingredients_path
+      render partial: "option_partial"
     else
       [404, "Ingredient did not save"]
       redirect_to new_ingredient_path

@@ -89,6 +89,10 @@ li .badge {
   border: none;
 }
 
-.list-group-item:hover {
-  background: rgba(0,0,0,.1);
+a.list-group-item:hover {
+  background-color: rgba(248,199,117,.1);
+  background-image: url("spoon_list.png");
+  background-repeat: no-repeat;
+  opacity: .5;
+  color: #177E2C;
 }
