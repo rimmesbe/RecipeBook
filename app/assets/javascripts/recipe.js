@@ -4,12 +4,6 @@ function add_fields(link, association, content){
   $(link).parent().before(content.replace(regexp, new_id));
 }
 
-function filter_ingredient(){
-
-};
-
-
-
 $( document ).ready(function() {
     // filters ingredient options
     // added option to selector to pinpoint option tags
@@ -32,6 +26,18 @@ $( document ).ready(function() {
     add_fields(link, association, content);
   });
 
+  // reload new recipe_ingredient data
+  $('#add_recipe').on("click", function(e){
+    e.preventDefault();
+    var $target = $(e.target);
+    console.log("target:");
+    console.log($target);
+    $.ajax({
+
+    })
+  });
+
+  // creates new ingredient
   $('form#new_ingredient').on("submit", function(e){
     e.preventDefault();
     var $target = $(e.target);
