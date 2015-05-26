@@ -4,8 +4,25 @@ function add_fields(link, association, content){
   $(link).parent().before(content.replace(regexp, new_id));
 }
 
+function filter_ingredient(){
+
+};
+
+
 
 $( document ).ready(function() {
+    // filters ingredient options
+    // added option to selector to pinpoint option tags
+    ingredient_selection = $('.select-ingredient option');
+    $('.select-type').change(function () {
+      f_type = $('.select-type :selected').text();
+      options = ingredient_selection.filter(function() {
+        // filters by f_type
+        return this.dataset.foodType === f_type;
+      });
+      $('.select-ingredient').html(options);
+    });
+
   // dynamically adds ingredient fields for new recipe
   $('#add_recipe').on("click", "a.link_to_add_fields", function(e){
     e.preventDefault();

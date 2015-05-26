@@ -16,7 +16,6 @@
       Title:<%= f.text_field :title %><br>
       Instructions:<br><%= f.text_area :instruction, :rows => 5 %>
     </p>
-    <%= f.select(:ingredient_food_type, ["meat", "grain", "dairy", "vegetable", "fruit", "spice", "other"]) %>
     <%= f.fields_for :recipe_ingredients, @recipe_ingredient do |builder| %>
       <%= render 'recipe_ingredient_fields', :f => builder %>
     <% end %>
