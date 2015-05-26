@@ -8,13 +8,19 @@ $( document ).ready(function() {
     // filters ingredient options
     // added option to selector to pinpoint option tags
     ingredient_selection = $('.select-ingredient option');
-    $('.select-type').change(function () {
+    $('.actions').delegate(".select-type", "change", function() {
       f_type = $('.select-type :selected').text();
+      console.log("f_type");
+      console.log(f_type);
+      console.log($('.select-type :selected').text());
       options = ingredient_selection.filter(function() {
         // filters by f_type
         return this.dataset.foodType === f_type;
       });
       $('.select-ingredient').html(options);
+
+      $('.select-type').val('1');
+
     });
 
   // dynamically adds ingredient fields for new recipe
