@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 dd {
   font-size: 18px;
   padding-left: 5%;
@@ -39,7 +43,7 @@ dd {
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 25px;
-  min-height: 500px;
+  height: 500px;
 }
 
 #chefs {
@@ -52,6 +56,8 @@ dd {
 
 #body {
   background-color: #D28218;
+  font-family: 'Open Sans', sans-serif;
+
 }
 
 #navigation {
@@ -60,8 +66,10 @@ dd {
 }
 
 .home-titles {
-  font-size: 56px;
+  font-size: 66px;
   padding-top: 10px;
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
 }
 
 .home-list {
@@ -74,11 +82,15 @@ dd {
 
 .recipe-chef {
   margin-left: 10%;
+  overflow: scroll;
+  height: 500px;
 }
 
-li .badge {
+.badge {
   background-color: #D28218;
-  color: #177E2C;
+  color: #FFCD82;
+  padding-left: 10px;
+  margin-left: 5px;
 }
 
 .list-group-item {
@@ -95,4 +107,10 @@ a.list-group-item:hover {
   background-repeat: no-repeat;
   opacity: .5;
   color: #177E2C;
+}
+
+#create-btn {
+  margin-top: 20px;
+  font-family: 'Playball', cursive;
+  font-size: 50px;
 }

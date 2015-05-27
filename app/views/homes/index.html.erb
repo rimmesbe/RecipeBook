@@ -20,10 +20,9 @@
       <div id="chefs">
         <div class="recipe-chef">
           <h1 class="home-titles">Chefs</h1>
-          <div id="home-users-list">
-            <ul class="list-group">
-              <% @users.each do |user| %>
-                <li class="home-list"><%= link_to user.name, user_path(user) %><span class="badge glyphicon glyphicon-book"><span style="padding-left: 5px;"></span><%= user.recipes.count %></span></li>
+          <div class="list-group">
+            <% @users.each do |user| %>
+                <%= link_to user.name, user_path(user), class: "list-group-item" %><span class="badge glyphicon glyphicon-book"><span style="padding-left: 5px;"></span><%= user.recipes.count %></span></li>
               <%end%>
             </ul>
           </div>
