@@ -2,6 +2,21 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+#search-recipe {
+  font-size: 50px;
+  float: right;
+  padding: 10px;
+}
+
+#search-recipe:hover {
+  background-color: #F8C176;
+  border-radius: 25px;
+}
+
+.search {
+  display: inline;
+}
+
 ::-webkit-scrollbar {
     display: none;
 }
@@ -67,6 +82,7 @@ dd {
 }
 
 .home-titles {
+  display: inline;
   font-size: 66px;
   padding-top: 10px;
   font-family: 'Playball', cursive;
