@@ -1,8 +1,20 @@
-<h1>Chef <%=@cur_user.name%></h1>
-<ul>
-  <% @recipes.each do |recipe| %>
-    <li><%= link_to recipe.title, recipe_path(recipe)%></li>
-  <%end%>
-</ul>
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+
+      <div id="user-div">
+        <div id="user-info">
+          <h1 id="user-title">Chef <%=@cur_user.name%>'s Recipes</h1>
+          <div class="list-group">
+            <% @recipes.each do |recipe| %>
+              <%= link_to recipe.title, recipe_path(recipe), class: "list-group-item user-lists" %>
+            <%end%>
+          </div>
+          <%= link_to 'Edit', edit_user_path(@user) %> |
+          <%= link_to 'Back', users_path %>
+        </div>
+      </div>
+
+    </div> <!-- col-md-12 -->
+  </div> <!-- row -->
+</div> <!-- container -->

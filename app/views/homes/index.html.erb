@@ -10,7 +10,7 @@
           </div>
           <div class="list-group">
             <% @recipes.each do |recipe| %>
-              <dt><%= link_to recipe.title,recipe_path(recipe), class: "list-group-item" %>
+              <dt><%= link_to recipe.title,recipe_path(recipe), class: "list-group-item homepage-lists" %>
                 <dd>Chef: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
             <%end%>
           </div>
@@ -25,7 +25,7 @@
           <h1 class="home-titles">Chefs</h1>
           <div class="list-group">
             <% @users.each do |user| %>
-                <%= link_to user.name, user_path(user), class: "list-group-item" %><span class="badge glyphicon glyphicon-book"><span style="padding-left: 5px;"></span><%= user.recipes.count %></span></li>
+                <%= link_to user.name, user_path(user), class: "list-group-item homepage-lists" %><span class="badge glyphicon glyphicon-book"><span style="padding-left: 5px;"></span><%= user.recipes.count %></span></li>
               <%end%>
             </ul>
           </div>

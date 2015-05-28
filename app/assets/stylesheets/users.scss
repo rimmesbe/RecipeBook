@@ -1,3 +1,51 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.user-lists {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  background: rgba(0,0,0,.1);
+  border: none;
+  line-height: 1.42857143;
+  width: 80%;
+}
+
+a.user-lists:visited {
+  color: black;
+}
+
+a.user-lists:hover {
+  background-color: #E8A74C;
+  background-image: url("spoon_list.png");
+  background-repeat: no-repeat;
+  opacity: .5;
+  color: #177E2C;
+}
+
+#user-div {
+  background-image: url("scorched_foodprep.jpg");
+  background-repeat: no-repeat;
+  color: #177E2C;
+  width: 100%;
+  height: 600px;
+  border-radius: 25px;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+#user-info {
+  margin-left: 10%;
+  overflow: scroll;
+}
+
+#user-title {
+  color: black;
+  font-size: 66px;
+  padding-top: 10px;
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
+}

@@ -115,15 +115,16 @@ dd {
   margin-left: 5px;
 }
 
-.list-group-item {
+.homepage-lists {
   font-size: 20px;
   padding-top: 10px;
   font-weight: 700;
   background: rgba(0,0,0,.1);
   border: none;
+  line-height: 1.42857143;
 }
 
-a.list-group-item:hover {
+a.homepage-lists:hover {
   background-color: rgba(248,199,117,.1);
   background-image: url("spoon_list.png");
   background-repeat: no-repeat;
