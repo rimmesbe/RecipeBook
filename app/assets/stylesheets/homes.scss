@@ -33,17 +33,6 @@ dd {
   margin: 0 auto;
 }
 
-.btn-default {
-  background-image: url("the-knife.jpg");
-  background-repeat: no-repeat;
-  border: none;
-  font-size: 40px;
-  font-weight: bold;
-  line-height: .6;
-  width: 93%;
-  height: 168px;
-}
-
 .btn-default:hover {
   opacity: .5;
 }
@@ -115,15 +104,16 @@ dd {
   margin-left: 5px;
 }
 
-.list-group-item {
+.homepage-lists {
   font-size: 20px;
   padding-top: 10px;
   font-weight: 700;
   background: rgba(0,0,0,.1);
   border: none;
+  line-height: 1.42857143;
 }
 
-a.list-group-item:hover {
+a.homepage-lists:hover {
   background-color: rgba(248,199,117,.1);
   background-image: url("spoon_list.png");
   background-repeat: no-repeat;
@@ -135,4 +125,25 @@ a.list-group-item:hover {
   margin-top: 20px;
   font-family: 'Playball', cursive;
   font-size: 50px;
+  background-image: url("the-knife.jpg");
+  background-repeat: no-repeat;
+  border: none;
+  font-weight: bold;
+  line-height: .6;
+  width: 93%;
+  height: 168px;
+}
+
+.user-nav {
+  color: black;
+}
+
+.glyphicon-log-in {
+  color: black;
+  font-size: 20px;
+}
+
+.glyphicon-user{
+  color: black;
+  font-size: 20px;
 }
