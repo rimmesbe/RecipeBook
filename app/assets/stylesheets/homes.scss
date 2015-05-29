@@ -89,6 +89,9 @@ dd {
   font-weight: 700;
   background: rgba(0,0,0,.1);
   border: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
 }
 
 .recipe-chef {
@@ -115,7 +118,7 @@ dd {
 
 a.homepage-lists:hover {
   background-color: rgba(248,199,117,.1);
-  background-image: url("spoon_list.png");
+  background-image: url("small_spoon_list.png");
   background-repeat: no-repeat;
   opacity: .5;
   color: #177E2C;
@@ -132,6 +135,7 @@ a.homepage-lists:hover {
   line-height: .6;
   width: 93%;
   height: 168px;
+  border-radius: 25px;
 }
 
 .user-nav {
