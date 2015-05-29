@@ -11,9 +11,11 @@
     </div>
   <% end %>
 
-  <div class="actions">
-    Name:<%= f.text_field :name %>
-    Password:<%= f.password_field :password %>
-    <%= f.submit %>
+  <div class="actions user-form">
+    <%= f.label :name, "UserName:", class: "user-info-label" %>
+    <%= f.text_field :name %>
+    <%= f.label :password, "Password:", class: "user-info-label" %>
+    <%= f.password_field :password %><br><br>
+    <%= f.submit 'Update User', class: "submit-user-update" %>
   </div>
 <% end %>
