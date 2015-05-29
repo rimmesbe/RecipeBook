@@ -10,11 +10,19 @@
               <%= link_to recipe.title, recipe_path(recipe), class: "list-group-item user-lists" %>
             <%end%>
           </div>
-          <%= link_to 'Edit', edit_user_path(@user) %> |
-          <%= link_to 'Back', users_path %>
         </div>
       </div>
-
     </div> <!-- col-md-12 -->
   </div> <!-- row -->
+
+  <div class="row">
+    <div class="col-md-12">
+      <div id="user-edit-div">
+        <% if @cur_user.id == session[:user_id] %>
+          <%= link_to 'Edit Profile', edit_user_path(@user), id: "user-edit-btn", class: "btn btn-default" %>
+        <%end%>
+      </div>
+    </div>
+  </div> <!-- row -->
+
 </div> <!-- container -->

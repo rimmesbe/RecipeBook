@@ -49,3 +49,24 @@ a.user-lists:hover {
   font-family: 'Playball', cursive;
   text-decoration: underline;
 }
+
+#user-edit-btn {
+  margin-top: 20px;
+  font-family: 'Playball', cursive;
+  font-size: 50px;
+  border: none;
+  font-weight: bold;
+  width: 300px;
+  height: 220px;
+  text-align: center;
+  border-radius: 20px;
+  text-decoration: underline;
+  background-image: url("scorched_chef_hat.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#user-edit-div {
+  margin: 0 auto;
+  width: 25%;
+}
