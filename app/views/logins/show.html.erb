@@ -1,9 +1,20 @@
-<h1>Login</h1>
-<%= form_tag('/login', method: :put) do %>
-  <div class="actions">
-    Name:<%= text_field_tag :name %>
-    Password:<%= password_field_tag :password %>
-    <%= submit_tag 'login'%>
-  </div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
 
-<%end%>
+      <h1 class="user-edit-h1">Login</h1>
+      <div class="user-info-div">
+        <div class="inner-user-info-div">
+          <%= form_tag('/login', method: :put) do %>
+            <div class="actions user-form">
+              <span class="custom-labels">UserName:</span><%= text_field_tag :name %>
+              <span class="custom-labels">Password:</span><%= password_field_tag :password %><br><br>
+              <%= submit_tag 'login', class: "submit-user-update" %>
+            </div>
+          <%end%>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
