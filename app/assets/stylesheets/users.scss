@@ -70,3 +70,52 @@ a.user-lists:hover {
   margin: 0 auto;
   width: 25%;
 }
+
+#user-edit-h1 {
+  font-family: 'Playball', cursive;
+  font-size: 60px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+
+#user-info-div {
+  box-shadow: 10px 10px 5px #555;
+  border: 3px solid #AE7331;
+  min-height: 200px;
+}
+
+#inner-user-info-div {
+  margin: 10px;
+}
+
+#user-editpage-show-btn {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+#user-editpage-show-btn:hover {
+  background: rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.user-info-label {
+  font-size: 20px;
+}
+
+.user-form input {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+.submit-user-update {
+  width: 25%;
+  margin-left: 30%;
+}
+
+.submit-user-update:hover {
+  background-color: #D28218;
+}
