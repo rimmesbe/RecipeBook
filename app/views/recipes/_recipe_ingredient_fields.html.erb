@@ -1,7 +1,6 @@
 <p class="add_ingredient">
-  <%= f.label :ingredient_id, "Ingredient" %><br>
+  <%= f.label :ingredient_id, "Ingredient:", class: "title-label" %><br>
   <%= f.collection_select :ingredient_id, Ingredient.order(:name), :id,:name, {include_blank: true}, {class: 'select-ingredient'} %>
-  <%= f.text_field :quantity %><br>
-  <%= f.check_box :_destroy %>
-  <%= f.label :_destroy, "Remove" %><br>
+  <%= f.label :quantity, "Quantity:", id: "quantity-label" %>
+  <%= f.text_field :quantity, id: "quantity-field" %><br>
 </p>

@@ -110,3 +110,31 @@ td, th {
 #recipe-form-p {
   padding-left: 5%;
 }
+
+#quantity-field {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 20%;
+}
+
+#quantity-label {
+  font-family: 'Playball', cursive;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.create-recipe-button {
+  background-image: url("japan_knife_opt.jpg");
+  width: 200px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 2em;
+  font-family: 'Playball', cursive;
+  margin-left: 35%;
+}
+
+.create-recipe-button:hover {
+  opacity: .5;
+}
