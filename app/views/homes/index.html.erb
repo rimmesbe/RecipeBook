@@ -4,10 +4,13 @@
     <div class="col-md-6">
       <div id="recipes">
         <div class="recipe-chef">
-          <h1 class="home-titles">Recipes</h1>
+          <div class="search">
+            <h1 class="home-titles">Recipes</h1>
+            <a href="#" id="search-recipe"><span class="glyphicon glyphicon-search"></span></a>
+          </div>
           <div class="list-group">
             <% @recipes.each do |recipe| %>
-              <dt><%= link_to recipe.title,recipe_path(recipe), class: "list-group-item" %>
+              <dt><%= link_to recipe.title,recipe_path(recipe), class: "list-group-item homepage-lists" %>
                 <dd>Chef: <%= link_to recipe.user.name, user_path(recipe.user) %></dd></dt>
             <%end%>
           </div>
@@ -20,10 +23,9 @@
       <div id="chefs">
         <div class="recipe-chef">
           <h1 class="home-titles">Chefs</h1>
-          <div id="home-users-list">
-            <ul class="list-group">
-              <% @users.each do |user| %>
-                <li class="home-list"><%= link_to user.name, user_path(user) %><span class="badge glyphicon glyphicon-book"><span style="padding-left: 5px;"></span><%= user.recipes.count %></span></li>
+          <div class="list-group">
+            <% @users.each do |user| %>
+                <%= link_to user.name, user_path(user), class: "list-group-item homepage-lists" %><span class="badge glyphicon glyphicon-book"><span style="padding-left: 5px;"></span><%= user.recipes.count %></span></li>
               <%end%>
             </ul>
           </div>

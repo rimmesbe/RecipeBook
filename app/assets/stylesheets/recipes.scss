@@ -1,3 +1,140 @@
 // Place all the styles related to the recipes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.column-style {
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+#book {
+  background-image: url("scorched_book.jpg");
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 900px;
+}
+
+.recipe-title-font {
+  font-family: 'Playball', cursive;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+#recipe-title-font {
+  font-size: 50px;
+}
+
+table, tr, th {
+  border: 1px solid black;
+}
+
+table {
+  width: 80%;
+}
+
+tr {
+  height: 30px;
+}
+
+td, th {
+  padding: 10px;
+}
+
+#edit-recipe-btn{
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
+  background-image: url("scorched_pepper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#edit-recipe-div {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.form-divs {
+  box-shadow: 10px 10px 5px #555;
+  border: 3px solid #AE7331;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+#new-ingredient-div {
+  height: 100px;
+  width: 50%;
+}
+
+#new-recipe-div {
+  width: 75%;
+}
+
+#title-field {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1.5em;
+  width: 50%;
+}
+
+.title-label {
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
+  font-size: 2.5em;
+  padding: 1%;
+}
+
+#instruction-field {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 80%;
+}
+
+#recipe-form-p {
+  padding-left: 5%;
+}
+
+#quantity-field {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 20%;
+}
+
+#quantity-label {
+  font-family: 'Playball', cursive;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+.create-recipe-button {
+  background-image: url("japan_knife_opt.jpg");
+  width: 200px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 2em;
+  font-family: 'Playball', cursive;
+  margin-left: 35%;
+}
+
+.create-recipe-button:hover {
+  opacity: .5;
+}
