@@ -29,7 +29,7 @@
 }
 
 table, tr, th {
-  border: 2px solid black;
+  border: 1px solid black;
 }
 
 table {
@@ -66,4 +66,20 @@ td, th {
 #edit-recipe-div {
   width: 30%;
   margin: 0 auto;
+}
+
+.form-divs {
+  box-shadow: 10px 10px 5px #555;
+  border: 3px solid #AE7331;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+#new-ingredient-div {
+  height: 100px;
+  width: 50%;
+}
+
+#new-recipe-div {
+  width: 75%;
 }
