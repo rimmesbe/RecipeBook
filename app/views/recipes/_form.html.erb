@@ -12,9 +12,11 @@
   <% end %>
 
   <div class="actions">
-    <p>
-      Title:<%= f.text_field :title %><br>
-      Instructions:<br><%= f.text_area :instruction, :rows => 5 %>
+    <p id="recipe-form-p">
+      <%= f.label :title, "Title:", class: "title-label" %><br>
+      <%= f.text_field :title, id: "title-field" %><br>
+      <%= f.label :instruction, "Instructions:", class: "title-label" %><br>
+      <%= f.text_area :instruction, :rows => 10, id: "instruction-field" %>
     </p>
     <%= f.fields_for :recipe_ingredients, @recipe_ingredient do |builder| %>
       <%= render 'recipe_ingredient_fields', :f => builder %>
