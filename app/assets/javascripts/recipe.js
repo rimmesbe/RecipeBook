@@ -10,9 +10,7 @@ $( document ).ready(function() {
     ingredient_selection = $('.select-ingredient option');
     $('.actions').delegate(".select-type", "change", function() {
       f_type = $('.select-type :selected').text();
-      console.log("f_type");
-      console.log(f_type);
-      console.log($('.select-type :selected').text());
+
       options = ingredient_selection.filter(function() {
         // filters by f_type
         return this.dataset.foodType === f_type;
