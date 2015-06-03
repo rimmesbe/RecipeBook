@@ -2,8 +2,14 @@
   <%= f.label :ingredient_id, "Ingredient:", class: "title-label" %><br>
   <%= select_tag(:food_type, options_for_select(["meat", "grain", "dairy", "vegetable", "fruit", "spice", "other"]), { include_blank: true, class: "select-type" }) %>
 
-  <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name, @recipe.recipe_ingredients[(f.options[:child_index].to_i)].ingredient_id) %>
+  <% p "parameteres" %>
+  <% p f.options[:child_index].to_i %>
 
+  <% if @recipe.recipe_ingredients.count > 0 %>
+    <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name, @recipe.recipe_ingredients[(f.options[:child_index].to_i)].ingredient_id) %>
+  <% else %>
+    <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name) %>
+  <% end %>
   <%#= f.collection_select :ingredient_id, Ingredient.order(:name), :id,:name, {include_blank: "select ingredient"}, {class: 'select-ingredient'} %>
   <%= f.label :quantity, "Quantity:", id: "quantity-label" %>
   <%= f.text_field :quantity, id: "quantity-field" %>
