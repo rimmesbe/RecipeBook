@@ -1,11 +1,8 @@
 <p class="add_ingredient">
   <%= f.label :ingredient_id, "Ingredient:", class: "title-label" %><br>
   <%= select_tag(:food_type, options_for_select(["meat", "grain", "dairy", "vegetable", "fruit", "spice", "other"]), { include_blank: true, class: "select-type" }) %>
-  <%= f.select :ingredient_id, nil, {}, {class: 'select-ingredient'} do %>
-    <%= Ingredient.all.each do |ingredient| %>
-      <%= content_tag(:option, ingredient.name, value: ingredient.id, data: {food_type: ingredient.food_type} )%>
-    <%end%>
-  <%end%>
+
+  <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name, @recipe.recipe_ingredients[(f.options[:child_index].to_i)].ingredient_id) %>
 
   <%#= f.collection_select :ingredient_id, Ingredient.order(:name), :id,:name, {include_blank: "select ingredient"}, {class: 'select-ingredient'} %>
   <%= f.label :quantity, "Quantity:", id: "quantity-label" %>

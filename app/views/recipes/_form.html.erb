@@ -18,8 +18,8 @@
       <%= f.label :instruction, "Instructions:", class: "title-label" %><br>
       <%= f.text_area :instruction, :rows => 10, id: "instruction-field" %>
     </p>
-    <%= f.fields_for :recipe_ingredients, @recipe_ingredient do |builder| %>
-      <%= render 'recipe_ingredient_fields', :f => builder %>
+    <%= f.fields_for :recipe_ingredients, @recipe.recipe_ingredients do |builder| %>
+      <%= render :partial => 'recipe_ingredient_fields', :locals => {:f => builder, :recipe => @recipe} %>
     <% end %>
     <p id="add_recipe"><%= link_to_add_fields "Add Recipe_Ingredient", f, :recipe_ingredients %></p>
     <p><%= f.submit class: "create-recipe-button" %></p>
