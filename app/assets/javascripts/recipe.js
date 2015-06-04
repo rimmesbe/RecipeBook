@@ -8,16 +8,21 @@ $( document ).ready(function() {
     // filters ingredient options
     // added option to selector to pinpoint option tags
     ingredient_selection = $('.select-ingredient option');
-    $('.actions').delegate(".select-type", "change", function() {
+    $('.actions').delegate(".select-type", "change", function(e) {
+      var $target = $(e.target);
+
       f_type = $('.select-type :selected').text();
 
       options = ingredient_selection.filter(function() {
         // filters by f_type
         return this.dataset.foodType === f_type;
       });
-      $('.select-ingredient').html(options);
 
-      $('.select-type').val('1');
+      $target.next().html(options)
+
+      // $('.select-ingredient').html(options);
+
+      $('.select-type').val('0');
 
     });
 
@@ -39,7 +44,7 @@ $( document ).ready(function() {
     add_fields(link, association, content);
   });
 
-  // reload new recipe_ingredient data
+  // TODO reload new recipe_ingredient data
   $('#add_recipe').on("click", function(e){
     e.preventDefault();
     var $target = $(e.target);
