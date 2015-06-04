@@ -44,6 +44,15 @@ class RecipesController < ApplicationController
     end
   end
 
+  def edit
+    if session[:user_id]
+      @ingredient = Ingredient.new
+      @recipe = Recipe.find_by(id: params[:id])
+    else
+      redirect_to login_path
+    end
+  end
+
   def update
     respond_to do |format|
       if @recipe.user_id == session[:user_id]

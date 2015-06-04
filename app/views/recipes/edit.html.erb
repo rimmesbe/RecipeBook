@@ -1,5 +1,18 @@
-<h1 class="recipe-title-font">Editing Recipe</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
 
-<%= render 'edit_form' %>
+      <div>
+        <h1 class="recipe-title-font">Editing Recipe</h1>
+        <div class="form-divs" id="new-recipe-div">
+          <%= render 'edit_form' %>
+        </div>
+        <h3 class="user-edit-h1">New Ingredient</h3>
+        <div class="form-divs" id="new-ingredient-div">
+          <%= render 'new_ingredient_form' %>
+        </div>
+      </div>
 
-
+    </div>
+  </div>
+</div>
