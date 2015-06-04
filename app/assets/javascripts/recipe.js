@@ -30,6 +30,15 @@ $( document ).ready(function() {
     add_fields(link, association, content);
   });
 
+  // dynamically adds ingredient fields for editing recipes
+  $('#edit_recipe').on("click", "a.link_to_edit_fields", function(e){
+    e.preventDefault();
+    var link = $(this);
+    var association = $(this).data("association");
+    var content = $(this).data("content");
+    add_fields(link, association, content);
+  });
+
   // reload new recipe_ingredient data
   $('#add_recipe').on("click", function(e){
     e.preventDefault();

@@ -1,0 +1,27 @@
+<%= form_for(@recipe) do |f| %>
+  <% if @recipe.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recipe.errors.count, "error") %> prohibited this recipe from being saved:</h2>
+
+      <ul>
+      <% @recipe.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <p id="recipe-form-p">
+      <%= f.label :title, "Title:", class: "title-label" %><br>
+      <%= f.text_field :title, id: "title-field" %><br>
+      <%= f.label :instruction, "Instructions:", class: "title-label" %><br>
+      <%= f.text_area :instruction, :rows => 10, id: "instruction-field" %>
+    </p>
+    <%= f.fields_for :recipe_ingredients, @recipe.recipe_ingredients do |builder| %>
+      <%= render :partial => 'edit_recipe_form', :locals => {:f => builder, :recipe => @recipe} %>
+    <% end %>
+    <p id="edit_recipe"><%= link_to_edit_fields "Add Recipe_Ingredient", f, :recipe_ingredients %></p>
+    <p><%= f.submit class: "create-recipe-button" %></p>
+  </div>
+<% end %>
