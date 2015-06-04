@@ -7,10 +7,10 @@ function add_fields(link, association, content){
 $( document ).ready(function() {
     // filters ingredient options
     // added option to selector to pinpoint option tags
-    ingredient_selection = $('.select-ingredient option');
+    var ingredient_selection = $('.select-ingredient option');
     $('.actions').delegate(".select-type", "change", function(e) {
       var $target = $(e.target);
-
+      console.log(ingredient_selection);
       f_type = $('.select-type :selected').text();
 
       options = ingredient_selection.filter(function() {
