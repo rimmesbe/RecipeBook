@@ -1,5 +1,4 @@
 <p class="add_ingredient">
-  <%= select_tag(:food_type, options_for_select(["meat", "grain", "dairy", "vegetable", "fruit", "spice", "other"]), { include_blank: true, class: "select-type" }) %>
 
   <%= f.select :ingredient_id, nil, {}, {class: 'select-ingredient'} do %>
     <%= Ingredient.all.each do |ingredient| %>

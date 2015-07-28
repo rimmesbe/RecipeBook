@@ -7,24 +7,24 @@ function add_fields(link, association, content){
 $( document ).ready(function() {
     // filters ingredient options
     // added option to selector to pinpoint option tags
-    var ingredient_selection = $('.select-ingredient option');
-    $('.actions').delegate(".select-type", "change", function(e) {
-      var $target = $(e.target);
-      console.log(ingredient_selection);
-      f_type = $('.select-type :selected').text();
+    // var ingredient_selection = $('.select-ingredient option');
+    // $('.actions').delegate(".select-type", "change", function(e) {
+    //   var $target = $(e.target);
+    //   console.log(ingredient_selection);
+    //   f_type = $('.select-type :selected').text();
 
-      options = ingredient_selection.filter(function() {
-        // filters by f_type
-        return this.dataset.foodType === f_type;
-      });
+    //   options = ingredient_selection.filter(function() {
+    //     // filters by f_type
+    //     return this.dataset.foodType === f_type;
+    //   });
 
-      $target.next().html(options)
+    //   $target.next().html(options)
 
-      // $('.select-ingredient').html(options);
+    //   // $('.select-ingredient').html(options);
 
-      $('.select-type').val('0');
+    //   $('.select-type').val('0');
 
-    });
+    // });
 
   // dynamically adds ingredient fields for new recipe
   $('#add_recipe').on("click", "a.link_to_add_fields", function(e){
@@ -42,16 +42,6 @@ $( document ).ready(function() {
     var association = $(this).data("association");
     var content = $(this).data("content");
     add_fields(link, association, content);
-  });
-
-  // TODO reload new recipe_ingredient data
-  $('#add_recipe').on("click", function(e){
-    e.preventDefault();
-    var $target = $(e.target);
-
-    $.ajax({
-
-    })
   });
 
   // creates new ingredient
