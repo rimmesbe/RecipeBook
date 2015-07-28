@@ -48,8 +48,7 @@ $( document ).ready(function() {
   $('#add_recipe').on("click", function(e){
     e.preventDefault();
     var $target = $(e.target);
-    console.log("target:");
-    console.log($target);
+
     $.ajax({
 
     })
