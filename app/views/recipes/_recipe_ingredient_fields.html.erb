@@ -1,6 +1,14 @@
 <p class="add_ingredient">
-  <%= f.label :ingredient_id, "Ingredient:", class: "title-label" %><br>
-  <%= f.collection_select :ingredient_id, Ingredient.order(:name), :id,:name, {include_blank: true}, {class: 'select-ingredient'} %>
+
+  <%= f.select :ingredient_id, nil, {}, {class: 'select-ingredient'} do %>
+    <%= Ingredient.all.each do |ingredient| %>
+      <%= content_tag(:option, ingredient.name, value: ingredient.id, data: {food_type: ingredient.food_type} )%>
+    <%end%>
+  <%end%>
+
+  <%#= f.collection_select :ingredient_id, Ingredient.order(:name), :id,:name, {include_blank: "select ingredient"}, {class: 'select-ingredient'} %>
   <%= f.label :quantity, "Quantity:", id: "quantity-label" %>
-  <%= f.text_field :quantity, id: "quantity-field" %><br>
+  <%= f.text_field :quantity, id: "quantity-field" %>
+  <%= f.label :_destroy, "Remove" %>
+  <%= f.check_box :_destroy %>
 </p>

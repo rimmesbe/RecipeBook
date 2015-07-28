@@ -6,4 +6,12 @@ module ApplicationHelper
     end
     link_to(name, "#", "data-association" => "#{association}" , "data-content" => "#{fields}", :class => "link_to_add_fields" )
   end
+
+  def link_to_edit_fields(name, f, association)
+    new_object =f.object.class.reflect_on_association(association).klass.new
+    fields = f.fields_for(association, [new_object], :child_index => "new_#{association}") do |builder|
+      render(association.to_s.singularize + "_edit", :f => builder)
+    end
+    link_to(name, "#", "data-association" => "#{association}" , "data-content" => "#{fields}", :class => "link_to_edit_fields" )
+  end
 end

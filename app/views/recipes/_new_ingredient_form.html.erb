@@ -1,8 +1,13 @@
-<%= form_for(@ingredient) do |f| %>
-  <div class="actions">
-    <p id="create-ingredient">
-      <%= f.text_field :name %><br>
-      <%= f.submit %>
-    </p>
-  </div>
-<%end%>
+<div class="create-ingredient-div">
+  <%= form_for(@ingredient) do |f| %>
+    <div class="actions">
+      <p id="create-ingredient">
+        <%= f.label :name, "Name:", class: "title-label" %>
+        <%= f.text_field :name %>
+        <%= f.label :food_type, "Category:", class: "title-label" %>
+        <%= f.select(:food_type, ['meat', 'grain', 'dairy', 'vegetable', 'fruit', 'spice', 'other'], {}, {class: "type-select"}) %><br>
+        <%= f.submit %>
+      </p>
+    </div>
+  <%end%>
+</div>

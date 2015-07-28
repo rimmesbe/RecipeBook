@@ -9,8 +9,6 @@ class RecipeIngredientsController < ApplicationController
   end
 
   def create
-    p "params"
-    p params
     @recipe_ingredient = Recipe_Ingredient.new(quantity: params[:quantity],
                                                recipe_id: params[:recipe_id],
                                                ingredient_id: params[:ingredient].id)
