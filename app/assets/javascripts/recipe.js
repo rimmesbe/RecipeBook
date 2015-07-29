@@ -5,27 +5,6 @@ function add_fields(link, association, content){
 }
 
 $( document ).ready(function() {
-    // filters ingredient options
-    // added option to selector to pinpoint option tags
-    // var ingredient_selection = $('.select-ingredient option');
-    // $('.actions').delegate(".select-type", "change", function(e) {
-    //   var $target = $(e.target);
-    //   console.log(ingredient_selection);
-    //   f_type = $('.select-type :selected').text();
-
-    //   options = ingredient_selection.filter(function() {
-    //     // filters by f_type
-    //     return this.dataset.foodType === f_type;
-    //   });
-
-    //   $target.next().html(options)
-
-    //   // $('.select-ingredient').html(options);
-
-    //   $('.select-type').val('0');
-
-    // });
-
   // dynamically adds ingredient fields for new recipe
   $('#add_recipe').on("click", "a.link_to_add_fields", function(e){
     e.preventDefault();

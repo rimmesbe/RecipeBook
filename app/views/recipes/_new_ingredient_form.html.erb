@@ -3,10 +3,10 @@
     <div class="actions">
       <p id="create-ingredient">
         <%= f.label :name, "Name:", class: "title-label" %>
-        <%= f.text_field :name %>
+        <%= f.text_field :name, class: "ingredient-name" %>
         <%= f.label :food_type, "Category:", class: "title-label" %>
         <%= f.select(:food_type, ['meat', 'grain', 'dairy', 'vegetable', 'fruit', 'spice', 'other'], {}, {class: "type-select"}) %><br>
-        <%= f.submit %>
+        <%= f.submit class: "create-ingredient-button" %>
       </p>
     </div>
   <%end%>

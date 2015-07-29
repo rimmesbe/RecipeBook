@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.select-ingredient {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 25%;
+}
+
 .column-style {
   padding-left: 10%;
   padding-top: 5%;
@@ -137,4 +145,14 @@ td, th {
 
 .create-recipe-button:hover {
   opacity: .5;
+}
+
+.add_ingredient{
+  margin-left: 5%;
+}
+
+#add_recipe{
+  margin-left: 5%;
+  font-size: 1.25em;
+  font-weight: bold;
 }
