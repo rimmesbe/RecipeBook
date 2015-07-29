@@ -15,6 +15,12 @@
   padding-top: 5%;
 }
 
+.column-style-right {
+  padding-left: 3%;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
 #book {
   background-image: url("scorched_book.jpg");
   background-repeat: no-repeat;
@@ -151,7 +157,7 @@ td, th {
   margin-left: 5%;
 }
 
-#add_recipe{
+.add_recipe{
   margin-left: 5%;
   font-size: 1.25em;
   font-weight: bold;

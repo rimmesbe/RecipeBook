@@ -21,7 +21,7 @@
     <%= f.fields_for :recipe_ingredients, @recipe.recipe_ingredients do |builder| %>
       <%= render :partial => 'edit_recipe_form', :locals => {:f => builder, :recipe => @recipe} %>
     <% end %>
-    <p id="edit_recipe"><%= link_to_edit_fields "Add Recipe_Ingredient", f, :recipe_ingredients %></p>
+    <p class="add_recipe" id="edit_recipe"><%= link_to_edit_fields "Add Ingredient Slot", f, :recipe_ingredients %></p>
     <p><%= f.submit class: "create-recipe-button" %></p>
   </div>
 <% end %>

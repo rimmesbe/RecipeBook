@@ -2,7 +2,13 @@ class RecipesController < ApplicationController
   before_action :set_recipe, only: [:show, :edit, :update, :destroy]
 
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.order('title ASC').all
+    @recipes_left = []
+    @recipes_right = []
+
+    @recipes.each_with_index do |r, i|
+      (i<=(@recipes.count/2)) ? @recipes_left.push(r) : @recipes_right.push(r)
+    end
 
     respond_to do |format|
       format.html

@@ -6,7 +6,7 @@ function add_fields(link, association, content){
 
 $( document ).ready(function() {
   // dynamically adds ingredient fields for new recipe
-  $('#add_recipe').on("click", "a.link_to_add_fields", function(e){
+  $('.add_recipe').on("click", "a.link_to_add_fields", function(e){
     e.preventDefault();
     var link = $(this);
     var association = $(this).data("association");

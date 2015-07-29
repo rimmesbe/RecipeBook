@@ -14,10 +14,10 @@ chicken_parm = Recipe.create(title: "Chicken Parm", instruction: "Bread it, bake
 
 meat_pie = Recipe.create(title: "Meat pie", instruction: "make a crust pocket, fill with meat", user: toria)
 
-Ingredient.create(name: "chicken", food_type: "meat")
+Ingredient.create(name: "chicken breast", food_type: "meat")
 Ingredient.create(name: "tomato sauce", food_type: "sauce")
-Ingredient.create(name: "chop meat", food_type: "meat")
+Ingredient.create(name: "ground beef", food_type: "meat")
 Ingredient.create(name: "dough", food_type: "grain")
 
-RecipeIngredient.create(recipe: chicken_parm, ingredient: Ingredient.find_by(name: "chicken"), quantity: "2")
+RecipeIngredient.create(recipe: chicken_parm, ingredient: Ingredient.find_by(name: "chicken breast"), quantity: "2")
 RecipeIngredient.create(recipe: chicken_parm, ingredient: Ingredient.find_by(name: "tomato sauce"), quantity: "1")
