@@ -1,0 +1,650 @@
+/* line 5, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#search-recipe {
+  font-size: 50px;
+  float: right;
+  padding: 10px;
+}
+
+/* line 11, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#search-recipe:hover {
+  background-color: #F8C176;
+  border-radius: 25px;
+}
+
+/* line 16, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.search {
+  display: inline;
+}
+
+/* line 20, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* line 24, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+dd {
+  font-size: 18px;
+  padding-left: 5%;
+  font-family: 'Playball', cursive;
+}
+
+/* line 30, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#create-recipe {
+  width: 50%;
+  height: 200px;
+  margin: 0 auto;
+}
+
+/* line 36, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.btn-default:hover {
+  opacity: .5;
+}
+
+/* line 40, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.user-nav {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+/* line 47, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.nav-style {
+  font-size: 20px;
+}
+
+/* line 51, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#recipes {
+  background-image: url("rounded-recipe-book2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  height: 500px;
+}
+
+/* line 59, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#chefs {
+  background-image: url("rounded-chef.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 25px;
+  min-height: 500px;
+}
+
+/* line 67, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#body {
+  background-color: #D28218;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* line 73, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#navigation {
+  background-color: #ae7331;
+  border: 1px solid #ae7331;
+}
+
+/* line 78, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.home-titles {
+  display: inline;
+  font-size: 66px;
+  padding-top: 10px;
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
+}
+
+/* line 86, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.home-list {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+/* line 97, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.recipe-chef {
+  margin-left: 10%;
+  overflow: scroll;
+  height: 500px;
+}
+
+/* line 103, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.badge {
+  background-color: #D28218;
+  color: #FFCD82;
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+/* line 110, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.homepage-lists {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  line-height: 1.42857143;
+}
+
+/* line 119, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+a.homepage-lists:hover {
+  background-color: rgba(248, 199, 117, 0.1);
+  background-image: url("small_spoon_list.png");
+  background-repeat: no-repeat;
+  opacity: .5;
+  color: #177E2C;
+}
+
+/* line 127, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+#create-btn {
+  margin-top: 20px;
+  font-family: 'Playball', cursive;
+  font-size: 50px;
+  background-image: url("the-knife.jpg");
+  background-repeat: no-repeat;
+  border: none;
+  font-weight: bold;
+  line-height: .6;
+  width: 93%;
+  height: 168px;
+  border-radius: 25px;
+}
+
+/* line 141, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.user-nav {
+  color: black;
+}
+
+/* line 145, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.glyphicon-log-in {
+  color: black;
+  font-size: 20px;
+}
+
+/* line 150, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/homes.scss */
+.glyphicon-user {
+  color: black;
+  font-size: 20px;
+}
+/* line 6, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/ingredients.scss */
+.type-select {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 20%;
+}
+
+/* line 14, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/ingredients.scss */
+.create-ingredient-div {
+  width: 100%;
+}
+
+/* line 18, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/ingredients.scss */
+.create-ingredient-button {
+  background-image: url("japan_knife_opt.jpg");
+  width: 150px;
+  height: 35px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  font-family: 'Playball', cursive;
+  margin-left: 1%;
+  margin-top: .5%;
+}
+
+/* line 29, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/ingredients.scss */
+.create-ingredient-button:hover {
+  opacity: .5;
+}
+
+/* line 33, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/ingredients.scss */
+.ingredient-name {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 20%;
+}
+/* line 1, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipe_index.scss */
+#book-back {
+  background-image: url("scorched_book.jpg");
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  width: 100%;
+  -webkit-background-size: cover;
+  height: 900px;
+}
+
+/* line 10, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipe_index.scss */
+.column-style-two {
+  padding-left: 10%;
+  padding-top: 10%;
+}
+
+/* line 15, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipe_index.scss */
+.recipe-index-list {
+  font-size: 1.5em;
+  padding-top: 5px;
+}
+/* line 5, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.select-ingredient {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 25%;
+}
+
+/* line 13, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.column-style {
+  padding-left: 10%;
+  padding-top: 5%;
+}
+
+/* line 18, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.column-style-right {
+  padding-left: 3%;
+  padding-right: 5%;
+  padding-top: 5%;
+}
+
+/* line 24, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#book {
+  background-image: url("scorched_book.jpg");
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  width: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  height: 900px;
+}
+
+/* line 35, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.recipe-title-font {
+  font-family: 'Playball', cursive;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+/* line 41, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#recipe-title-font {
+  font-size: 50px;
+}
+
+/* line 45, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+table, tr, th {
+  border: 1px solid black;
+}
+
+/* line 49, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+table {
+  width: 80%;
+}
+
+/* line 53, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+tr {
+  height: 30px;
+}
+
+/* line 57, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+td, th {
+  padding: 10px;
+}
+
+/* line 61, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#edit-recipe-btn {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
+  background-image: url("scorched_pepper.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* line 80, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#edit-recipe-div {
+  width: 30%;
+  margin: 0 auto;
+}
+
+/* line 85, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.form-divs {
+  box-shadow: 10px 10px 5px #555;
+  border: 3px solid #AE7331;
+  border-radius: 25px;
+  margin-bottom: 20px;
+}
+
+/* line 92, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#new-ingredient-div {
+  height: 100px;
+  width: 70%;
+}
+
+/* line 97, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#new-recipe-div {
+  width: 75%;
+}
+
+/* line 101, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#title-field {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1.5em;
+  width: 50%;
+}
+
+/* line 109, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.title-label {
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
+  font-size: 2.5em;
+  padding: 1%;
+}
+
+/* line 116, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#instruction-field {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 80%;
+}
+
+/* line 124, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#recipe-form-p {
+  padding-left: 5%;
+}
+
+/* line 128, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#quantity-field {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 1em;
+  width: 20%;
+}
+
+/* line 136, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+#quantity-label {
+  font-family: 'Playball', cursive;
+  font-size: 1.5em;
+  padding: 5px;
+}
+
+/* line 142, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.create-recipe-button {
+  background-image: url("japan_knife_opt.jpg");
+  width: 200px;
+  height: 48px;
+  border-radius: 10px;
+  font-size: 2em;
+  font-family: 'Playball', cursive;
+  margin-left: 35%;
+}
+
+/* line 152, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.create-recipe-button:hover {
+  opacity: .5;
+}
+
+/* line 156, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.add_ingredient {
+  margin-left: 5%;
+}
+
+/* line 160, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/recipes.scss */
+.add_recipe {
+  margin-left: 5%;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+/* line 1, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #423A27;
+}
+/* line 26, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #177E2C;
+  background-color: #ae7331;
+}
+
+/* line 33, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* line 5, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.user-lists {
+  font-size: 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.1);
+  border: none;
+  line-height: 1.42857143;
+  width: 80%;
+}
+
+/* line 15, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+a.user-lists:visited {
+  color: black;
+}
+
+/* line 19, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+a.user-lists:hover {
+  background-color: #E8A74C;
+  background-image: url("spoon_list.png");
+  background-repeat: no-repeat;
+  opacity: .5;
+  color: #177E2C;
+}
+
+/* line 27, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+#user-div {
+  background-image: url("scorched_foodprep.jpg");
+  background-repeat: no-repeat;
+  color: #177E2C;
+  width: 100%;
+  height: 600px;
+  border-radius: 25px;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+/* line 40, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+#user-info {
+  margin-left: 10%;
+  overflow: scroll;
+}
+
+/* line 45, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+#user-title {
+  color: black;
+  font-size: 66px;
+  padding-top: 10px;
+  font-family: 'Playball', cursive;
+  text-decoration: underline;
+}
+
+/* line 53, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+#user-edit-btn {
+  margin-top: 20px;
+  font-family: 'Playball', cursive;
+  font-size: 50px;
+  border: none;
+  font-weight: bold;
+  width: 300px;
+  height: 220px;
+  text-align: center;
+  border-radius: 20px;
+  text-decoration: underline;
+  background-image: url("scorched_chef_hat.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* line 69, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+#user-edit-div {
+  margin: 0 auto;
+  width: 25%;
+}
+
+/* line 74, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.user-edit-h1 {
+  font-family: 'Playball', cursive;
+  font-size: 60px;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+/* line 82, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.user-info-div {
+  box-shadow: 10px 10px 5px #555;
+  border: 3px solid #AE7331;
+  min-height: 200px;
+}
+
+/* line 88, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.inner-user-info-div {
+  margin: 10px;
+}
+
+/* line 92, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+#user-editpage-show-btn {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+/* line 97, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+#user-editpage-show-btn:hover {
+  background: transparent;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* line 103, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.user-info-label {
+  font-size: 20px;
+}
+
+/* line 107, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.user-form input {
+  background-color: #F8C176;
+  line-height: 1.5;
+  border-radius: 10px;
+  font-size: 30px;
+}
+
+/* line 114, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.submit-user-update {
+  width: 25%;
+  margin-left: 30%;
+}
+
+/* line 119, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.submit-user-update:hover {
+  background-color: #D28218;
+}
+
+/* line 123, /Users/ryanimmesberger/GitStuff/RecipeBook/app/assets/stylesheets/users.scss */
+.custom-labels {
+  font-size: 20px;
+  font-weight: 300;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
