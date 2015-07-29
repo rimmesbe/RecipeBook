@@ -1,9 +1,9 @@
 <p class="add_ingredient">
-  <%= f.label :ingredient_id, "Ingredient:", class: "title-label" %><br>
+
   <% if @recipe.recipe_ingredients.count > 0 %>
-    <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name, @recipe.recipe_ingredients[(f.options[:child_index].to_i)].ingredient_id), {}, {:class => 'select-ingredient'}  %>
+    <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.order('name ASC').all, :id, :name, @recipe.recipe_ingredients[(f.options[:child_index].to_i)].ingredient_id), {}, {:class => 'select-ingredient'}  %>
   <% else %>
-    <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.all, :id, :name), {}, {:class => 'select-ingredient'} %>
+    <%= f.select :ingredient_id, options_from_collection_for_select(Ingredient.order('name ASC').all, :id, :name), {}, {:class => 'select-ingredient'} %>
   <% end %>
 
   <%= f.label :quantity, "Quantity:", id: "quantity-label" %>
