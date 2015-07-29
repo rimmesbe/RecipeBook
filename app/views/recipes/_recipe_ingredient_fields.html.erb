@@ -1,7 +1,7 @@
 <p class="add_ingredient">
 
   <%= f.select :ingredient_id, nil, {}, {class: 'select-ingredient'} do %>
-    <%= Ingredient.all.each do |ingredient| %>
+    <%= Ingredient.order('name ASC').all.each do |ingredient| %>
       <%= content_tag(:option, ingredient.name, value: ingredient.id, data: {food_type: ingredient.food_type} )%>
     <%end%>
   <%end%>
