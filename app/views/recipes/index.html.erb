@@ -1,28 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="container-fluid">
+  <div id="book-back">
+    <div class="row">
+      <div class="col-md-6 column-style" id="left-page">
+        <h1 class="recipe-title-font">Recipes</h1>
+        <ul>
+          <% @recipes_left.each do |r_left| %>
+            <li class="recipe-index-list"><a href="/recipes/<%=r_left.id%>"><%=r_left.title%></a></li>
+          <%end%>
+        </ul>
+      </div>
 
-<h1>Listing Recipes</h1>
+      <div class="col-md-6 column-style-two" id="right-page">
+        <ul>
+          <% @recipes_right.each do |r_right| %>
+            <li class="recipe-index-list"><a href="/recipes/<%=r_right.id%>"><%=r_right.title%></a></li>
+          <%end%>
+        </ul>
+      </div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @recipes.each do |recipe| %>
-      <tr>
-        <td><%= recipe.title %></td>
-        <td><%= link_to 'Show', recipe %></td>
-        <% if recipe.user_id == session[:user_id] %>
-          <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-          <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <%end%>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Recipe', new_recipe_path %>
+    </div> <!-- row -->
+  </div> <!-- book-back -->
+</div> <!-- container -->
