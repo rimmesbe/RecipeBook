@@ -1,27 +1,28 @@
 
 <div class="container-fluid">
-  <div id="book">
-    <div class="row">
-      <div class="col-md-6 column-style">
-        <h1 class="recipe-title-font" id="recipe-title-font"><%=@cur_recipe.title%></h1>
-        <h3 class="recipe-title-font">Ingredients:</h3>
+  <div id="recipe-page">
+    <div id="book">
+      <div class="row">
+        <div class="col-md-6 column-style">
+          <h1 class="recipe-title-font" id="recipe-title-font"><%=@cur_recipe.title%></h1>
+          <h3 class="recipe-title-font">Ingredients:</h3>
 
-        <table>
-          <tr style="text-align: left;"><th>Name</th><th>Amount</th></tr>
-          <% @cur_recipe.recipe_ingredients.each do |rec_ing| %>
-            <tr><td><%=rec_ing.ingredient.name%></td><td><%=rec_ing.quantity%></td></tr>
-          <%end%>
-        </table>
-      </div>
-
-      <div class="col-md-6 column-style-right">
-        <div id="instuction-div">
-          <h3 class="recipe-title-font">Instructions:</h3>
-          <p><%=@cur_recipe.instruction%></p>
+          <table>
+            <tr style="text-align: left;"><th>Name</th><th>Amount</th></tr>
+            <% @cur_recipe.recipe_ingredients.each do |rec_ing| %>
+              <tr><td><%=rec_ing.ingredient.name%></td><td><%=rec_ing.quantity%></td></tr>
+            <%end%>
+          </table>
         </div>
-      </div>
-    </div> <!-- row -->
-  </div> <!-- book -->
+
+        <div class="col-md-6 column-style-right">
+          <div id="instuction-div">
+            <h3 class="recipe-title-font">Instructions:</h3>
+            <p><%=@cur_recipe.instruction%></p>
+          </div>
+        </div>
+      </div> <!-- row -->
+    </div> <!-- book -->
     <div class="row">
       <div class="col-md-12">
         <div id="edit-recipe-div">
@@ -29,4 +30,5 @@
         </div>
       </div>
     </div>
+  </div>
 </div>
