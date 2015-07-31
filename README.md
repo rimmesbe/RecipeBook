@@ -11,3 +11,7 @@ Jquery
 BootStrap
 HTML
 CSS
+
+to precompile assets on heroku run:
+$ bundle exec rake assets:precompile RAILS_ENV=production
+
