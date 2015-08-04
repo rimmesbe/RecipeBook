@@ -4,7 +4,7 @@ $( document ).ready(function() {
     $('div').animate({right: '2000px'}, "slow");
   });
   // hope page button
-  $('.navbar-header').on("click", function(e){
+  $('#homepage-btn').on("click", function(e){
     $('div').animate({left: '2000px'}, "slow");
   });
   // home page list links
